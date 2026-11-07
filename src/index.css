@@ -1,0 +1,10 @@
+@tailwind base;@tailwind components;@tailwind utilities;
+:root{--bg:#F5F6FA;--surface:#fff;--ink:#12141C;--mute:#5B6072;--line:#E3E5EE;--brand:#2F4BFF;--brand-ink:#fff;--warn:#B45309}
+.dark{--bg:#0E1017;--surface:#161923;--ink:#EEF0F7;--mute:#9AA0B4;--line:#262A38;--brand:#6F86FF;--brand-ink:#0E1017;--warn:#FBBF24}
+body{@apply bg-bg text-ink font-sans antialiased}
+:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+.btn{@apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition active:scale-[.97] disabled:opacity-50 disabled:cursor-not-allowed}
+.btn-primary{@apply btn bg-brand text-brand-ink hover:opacity-90}
+.btn-ghost{@apply btn border border-line bg-surface hover:bg-bg}
+@keyframes sk{50%{opacity:.45}}.sk{animation:sk 1.4s infinite;@apply rounded-lg bg-line}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
